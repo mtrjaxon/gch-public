@@ -55,6 +55,6 @@ Before using GCH, make sure you have the following:
 
 Please note that GCH uses `gmad.exe`, a part of the GMAD (Garry's Mod Addon Creator) tool, to perform its functions. Make sure to have `gmad.exe` available within the working directory of the GCH release.
 
-Please refer to the [GCH GitHub repository](https://github.com/your-username/your-repo) for more information, documentation, and issue tracking.
+Please refer to the [GCH GitHub repository](https://github.com/yoursorrow/gch-public/) for more information, documentation, and issue tracking.
 
-If you
+
