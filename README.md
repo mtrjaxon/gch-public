@@ -9,7 +9,7 @@ GCH (Gmod Content Helper) is a tool designed to assist with the preparation of G
 Before using GCH, make sure you have the following:
 
 - GCH installed on your system. (Provide instructions on how to install GCH, if necessary)
-- .gma files of the addons you want to work with. If you don't have any .gma files, you can obtain them from your gmod workshop folder.
+- .gma files of the addons you want to work with. If you don't have any .gma files, you can obtain them from your Garry's Mod workshop folder.
 
 ### Getting Started
 
@@ -24,7 +24,7 @@ Before using GCH, make sure you have the following:
 
 ### Compressing Addons with GAC
 
-1. Open GAC (Gmod Addon Compressor). If you dont have it, go here: https://github.com/Shark-vil/GmodAddonCompressor
+1. Open GAC (Gmod Addon Compressor). If you don't have it, you can obtain it from [here](https://github.com/Shark-vil/GmodAddonCompressor).
 2. In GAC, select the folder where you extracted the addon contents using GCH.
 3. GAC will compress the addons into the final format.
 
@@ -52,3 +52,9 @@ Before using GCH, make sure you have the following:
 - **Addon.json File Replacement**: GCH creates an addon.json file for each extracted .gma file. In the event that an addon.json file already exists, GCH will replace it with the newly generated one. This ensures that the addon.json remains up to date with any changes made during the optimization process.
 
 ---
+
+Please note that GCH uses `gmad.exe`, a part of the GMAD (Garry's Mod Addon Creator) tool, to perform its functions. Make sure to have `gmad.exe` available within the working directory of the GCH release.
+
+Please refer to the [GCH GitHub repository](https://github.com/your-username/your-repo) for more information, documentation, and issue tracking.
+
+If you
