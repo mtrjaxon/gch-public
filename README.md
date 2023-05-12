@@ -24,7 +24,7 @@ Before using GCH, make sure you have the following:
 
 ### Compressing Addons with GAC
 
-1. Open GAC (Gmod Addon Compressor).
+1. Open GAC (Gmod Addon Compressor). If you dont have it, go here: https://github.com/Shark-vil/GmodAddonCompressor
 2. In GAC, select the folder where you extracted the addon contents using GCH.
 3. GAC will compress the addons into the final format.
 
