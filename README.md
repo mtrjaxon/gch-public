@@ -9,7 +9,7 @@ GCH (Gmod Content Helper) is a tool designed to assist with the preparation of G
 Before using GCH, make sure you have the following:
 
 - GCH installed on your system. (Provide instructions on how to install GCH, if necessary)
-- .gma files of the addons you want to work with. If you don't have any .gma files, you can obtain them from the Garry's Mod workshop.
+- .gma files of the addons you want to work with. If you don't have any .gma files, you can obtain them from your gmod workshop folder.
 
 ### Getting Started
 
