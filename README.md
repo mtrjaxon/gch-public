@@ -39,7 +39,7 @@ Before using GCH, make sure you have the following:
 - **Debugging GMAD Errors**: In the GCH code, there are lines that handle debugging errors in GMAD (Garry's Mod Addon Creator). If you encounter issues related to GMAD, you can uncomment the following lines to enable error debugging:
 
     ```csharp
-    /* This is for debugging errors in GMAD, not GCPO
+    /* This is for debugging errors in GMAD, not GCH
         -- process.ErrorDataReceived += Process_ErrorDataReceived;
         -- process.OutputDataReceived += Process_OutputDataReceived;
     */
