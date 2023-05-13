@@ -17,7 +17,7 @@ namespace PackOptimizer
              * Note: This tool is meant to be used in conjunction with GAC (Gmod Addon Compressor) and does not perform addon compression itself.
              * GCH provides various utilities and functions to assist in the process of preparing addons for compression with GAC.
              * 
-             * Developer's Note: Please be aware that this tool does not support on-load functions and code. The project developer has intentionally excluded support for on-load functionality to ensure compatibility and reliability with GAC and its compression process.
+             * Developer's Note: Please be aware that this tool does not support on-load functions and code. srw has intentionally excluded support for on-load functionality to ensure compatibility and reliability with GAC and its compression process.
              * 
              * Usage:
              * 1. Prepare your addon files by organizing and optimizing them using GCH.
@@ -25,9 +25,9 @@ namespace PackOptimizer
              * 
              * For more information and documentation, please refer to the GCH GitHub repository: 
              * 
-             * If you have any questions or encounter issues, please feel free to open an issue on the repository or reach out to the project developer.
+             * If you have any questions or encounter issues, please feel free to open an issue on the repository or reach out to the srw.
              * 
-             * Happy compressing!
+
              */
         }
         private string targetDirectory;
