@@ -67,6 +67,6 @@ To create the content pack, follow these steps:
 
     Remove the `/*` and `*/` around these lines to uncomment them. This will provide more detailed error information in case of GMAD-related problems.
 
-- **Message Box Prompt**: By default, GCH displays message boxes during certain operations to provide insights into what's happening behind the scenes. If you find these prompts too intrusive, you can modify the appropriate settings in the tool to disable them. However, it is generally recommended to leave this feature enabled unless you encounter issues.
+- **Message Box Prompt**: In contrast to GCH1, GCH2's logging system is actually taken advantage of and is used quite frequently. The only time you should see messageboxes is if there was a completed action that needs immediate attention, or a file confliction (maybe)
 
 - **Addon.json File Replacement**: GCH creates an addon.json file for each extracted .gma file. If an addon.json file already exists, GCH replaces it with the newly generated one to ensure it remains up to date with any changes made during the optimization process.
