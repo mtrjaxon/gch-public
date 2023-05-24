@@ -57,26 +57,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label2.Text" xml:space="preserve">
-    <value>This tool is meant to be used with GAC, an addon for 
-compressing garry's mod addons. This tool does not 
-compress addons itself, it simply uses GMAD to 
-make the process easier and faster.
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="label4.Text" xml:space="preserve">
+    <value>gch2 will receive minor version updates only. 
+There won't be a gch3.0
 
-The tool works perfectly fine for every addon I've tested
-but in the case that it doesn't for you, sorry I guess.
-If your addons already have an "addon.json" built into
-them, GCH will replace them in its effort to make the
-process more streamlined. You can configure this text
-in the source code, however nobody can read it so it
-doesn't matter much.
-
-This tool is entirely single-threaded, and will hang during
-large file operations. Do NOT close the tool, it is working.
-The only time you should ever close the tool is if you
-get an error code, or if you left debug features on. Most 
-issues can be fixed by simply clearing the "final" and "pack"
-folders.
-</value>
+As for things like 'gch2.1' or 'gch2.2' those will only be made by me if there are big bugs in the source code.
+Most bugs are user-created, or limitations of gmad which I've already explained in the github readme.md.
+If you want a better UI, download the source and move things around. It's very easy in WinForms, I did it
+that way on purpose. 
+Note: All current async functions are still in beta. Consider them broken.</value>
   </data>
 </root>
