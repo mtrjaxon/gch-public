@@ -246,20 +246,24 @@ namespace PackOptimizer
         private async void CreateContentPack()
         {
             string workingDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string binFolderPath = Path.Combine(workingDirectory, "bin");
-            string sourceDirectory = Path.Combine(workingDirectory, "release");
-            string targetFilePath = Path.Combine(binFolderPath, "gchcontentpack.gma");
 
+            // Create the "bin" folder if it doesn't exist
+            string binFolderPath = Path.Combine(workingDirectory, "bin");
             if (!Directory.Exists(binFolderPath))
             {
                 Directory.CreateDirectory(binFolderPath);
             }
 
+            string sourceDirectory = Path.Combine(workingDirectory, "release");
+            string targetFilePath = Path.Combine(binFolderPath, "gchcontentpack.gma"); // Update target file path
+
+            // Remove the target file if it already exists
             if (File.Exists(targetFilePath))
             {
                 File.Delete(targetFilePath);
             }
 
+            // Check if addon.json exists, and create one if it doesn't
             string addonJsonPath = Path.Combine(sourceDirectory, "addon.json");
             if (!File.Exists(addonJsonPath))
             {
@@ -278,11 +282,12 @@ namespace PackOptimizer
             }
 
             string gmadPath = Path.Combine(workingDirectory, "gmad.exe");
+            string gmadArguments = $"create -folder \"{sourceDirectory}\" -out \"{targetFilePath}\"";
 
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
                 FileName = gmadPath,
-                Arguments = $"create -folder \"{sourceDirectory}\" -out \"{targetFilePath}\"",
+                Arguments = gmadArguments,
                 UseShellExecute = false,
                 CreateNoWindow = true,
                 RedirectStandardOutput = true,
@@ -293,18 +298,30 @@ namespace PackOptimizer
             using (Process process = new Process())
             {
                 process.StartInfo = startInfo;
+                StringBuilder outputBuilder = new StringBuilder();
+                StringBuilder errorBuilder = new StringBuilder();
 
-                // Asynchronously read output and error streams
-                Task<string> outputTask = process.StandardOutput.ReadToEndAsync();
-                Task<string> errorTask = process.StandardError.ReadToEndAsync();
+                process.OutputDataReceived += (sender, e) =>
+                {
+                    if (!string.IsNullOrWhiteSpace(e.Data))
+                    {
+                        outputBuilder.AppendLine(e.Data);
+                    }
+                };
+
+                process.ErrorDataReceived += (sender, e) =>
+                {
+                    if (!string.IsNullOrWhiteSpace(e.Data))
+                    {
+                        errorBuilder.AppendLine(e.Data);
+                    }
+                };
 
                 process.Start();
+                process.BeginOutputReadLine();
+                process.BeginErrorReadLine();
 
-                // Wait for the process to exit
-                await process.WaitForExitAsync();
-
-                string output = await outputTask;
-                string error = await errorTask;
+                process.WaitForExit();
 
                 if (process.ExitCode == 0)
                 {
@@ -314,15 +331,16 @@ namespace PackOptimizer
                 {
                     string errorMessage = "GMAD did not report an error to GCH, but there was an error. Sorry.";
 
-                    if (!string.IsNullOrWhiteSpace(error))
+                    if (errorBuilder.Length > 0)
                     {
-                        errorMessage += Environment.NewLine + Environment.NewLine + "Error Message:" + Environment.NewLine + error;
+                        errorMessage += Environment.NewLine + Environment.NewLine + "Error Message:" + Environment.NewLine + errorBuilder.ToString();
                     }
 
-                    richTextBox1.Text += errorMessage;
+                    richTextBox1.Text = richTextBox1.Text + (errorMessage);
                 }
             }
         }
+    
 
         // SPEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEED!
         private async void MergeAddons()
