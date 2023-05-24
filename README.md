@@ -56,6 +56,8 @@ To create the content pack, follow these steps:
 
 - **Experimental Features**: GCH offers experimental features that you can enable by going to Options and clicking on "Experimental Features." Enabling this feature makes the "Create" button available. When using this feature, ensure that your extracted folder is still present and click on "Create." It is highly recommended to keep the file size below 900 Megabytes to avoid potential issues with the GMAD tool.
 
+- **Asynchronous merging**: This feature is a full release in 2.0, unlike extraction. This does see a decent speed improvement over its V1 counterpart, so it stays.
+
 - **Debugging GMAD Errors**: If you encounter issues related to GMAD (Garry's Mod Addon Creator), you can uncomment specific lines in the GCH code to enable error debugging. To do this, locate the following lines in the code:
 
     ```csharp
