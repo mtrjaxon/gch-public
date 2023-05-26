@@ -61,7 +61,7 @@ To create the content pack, follow these steps:
 - **Debugging GMAD Errors**: If you encounter issues related to GMAD (Garry's Mod Addon Creator), you can uncomment specific lines in the GCH code to enable error debugging. To do this, locate the following lines in the code:
 
     ```csharp
-    /* This is for debugging errors in GMAD, not GCH
+    /* This is for debugging errors in GMAD, not GCH !!!!!!!!! THIS NEEDS TO BE CHANGED !!!!!!!!!!! IT IS DONE A DIFFERENT WAY NOW
         -- process.ErrorDataReceived += Process_ErrorDataReceived;
         -- process.OutputDataReceived += Process_OutputDataReceived;
     */
