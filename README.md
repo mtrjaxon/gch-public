@@ -72,6 +72,6 @@ To create the content pack:
 
     Remove the `/*` and `*/` to uncomment these lines for more detailed error information.
 
-- **Message Box Prompts**: Unlike GCH1, GCH2's logging system is more actively used. Message boxes will only appear for immediate actions or file conflicts.
+- **Logging**: Unlike GCH2, GCH3 has improved the logging system, making it more verbose, and more reliable.
 
 - **Addon.json File Replacement**: GCH3 creates a new `addon.json` file for each extracted `.gma` file. If an `addon.json` file already exists, it will be replaced with the updated version to reflect any changes made during optimization.
