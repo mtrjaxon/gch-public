@@ -6,6 +6,7 @@ GCH (Garry's Mod Content Helper) is your ultimate tool for preparing Garry's Mod
 
 - **Invoke-Based Threading**: I've replaced the previous task-based threading system with invoke-based threading. This change reduces crashes, freezes, and errors, ensuring a smoother experience.
 - **Reworked UI**: The interface has been updated to make it more user-friendly and easier to navigate.
+- **Full Featureset**: There are no longer any expirimental functions in GCH, they have all been fixed and added to the full feature pool.
 
 ## Tutorial: Using GCH3 for Garry's Mod Content Packs
 
@@ -57,8 +58,6 @@ To create the content pack:
    - **bin**: Contains the `gchcontentpack.gma` file, which you can upload to the workshop.
 
 ## Additional Notes
-
-- **Experimental Features**: Enable experimental features via the Options menu. This will make the "Create" button available. For best results, keep the file size below 900 Megabytes to avoid potential issues with the GMAD tool.
   
 - **Asynchronous Merging**: GCH3 includes a full release of asynchronous merging, providing notable speed improvements over its predecessor.
 
